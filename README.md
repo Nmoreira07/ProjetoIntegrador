@@ -24,6 +24,9 @@ carrinho de compras (Cliente/Administrador) {
 	Usuário podera cadastrar formas de pagamento e conferir os produtos adicionados no carrinho. 
 }
 
+cadastrar forma de pagamento (Cliente/Administrador) {
+	Cliente podera cadastras as suas formas de pagamento, incluindo: débito, crédito, boleto e pix.
+}
 
 
  
