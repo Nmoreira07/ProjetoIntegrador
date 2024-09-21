@@ -29,6 +29,22 @@ cadastrar forma de pagamento (Cliente/Administrador) {
 }
 
 
- 
+ ![Home (LOW FIDELITY)](/IMGPI/HomeLF.PNG)
 
+ ![Login (LOW FIDELITY)](/IMGPI/LoginLF.PNG)
+
+ ![Carrinho](/IMGPI/CarrinhoLF.PNG)
+
+ ![Favoritos](/IMGPI/FavoritosLF.PNG)
+
+ ![Home (HIGH FIDELITY)](/IMGPI/TelaInicio.PNG)
+
+ ![Login (HIGH FIDELITY)](/IMGPI/TelaLogin.PNG)
+
+ ![Carrinho (HIGH FIDELITY)](/IMGPI/Carrinho.PNG)
+
+ ![Favoritos (HIGH FIDELITY)](/IMGPI/Favorito.PNG)
+
+ ![Modelo Entidade e Relacionamento (MER)](/IMGPI/MER.png)
+ 
 
