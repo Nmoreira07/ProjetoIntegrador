@@ -28,22 +28,39 @@ cadastrar forma de pagamento (Cliente/Administrador) {
 	Cliente podera cadastras as suas formas de pagamento, incluindo: débito, crédito, boleto e pix.
 }
 
-
- ![Home (LOW FIDELITY)](/IMGPI/HomeLF.PNG)
+**Login Low Fidelity**
 
  ![Login (LOW FIDELITY)](/IMGPI/LoginLF.PNG)
 
+**Home Low Fidelity**
+
+ ![Home (LOW FIDELITY)](/IMGPI/HomeLF.PNG)
+
+**Carrinho Low Fidelity**
+
  ![Carrinho](/IMGPI/CarrinhoLF.PNG)
+
+**Favoritos Low Fidelity**
 
  ![Favoritos](/IMGPI/FavoritosLF.PNG)
 
- ![Home (HIGH FIDELITY)](/IMGPI/TelaInicio.PNG)
+**Login High Fidelity**
 
  ![Login (HIGH FIDELITY)](/IMGPI/TelaLogin.PNG)
 
+**Home High Fidelity**
+
+ ![Home (HIGH FIDELITY)](/IMGPI/TelaInicio.PNG)
+
+**Carrinho High Fidelity**
+
  ![Carrinho (HIGH FIDELITY)](/IMGPI/Carrinho.PNG)
 
+**Favoritos High Fidelity**
+
  ![Favoritos (HIGH FIDELITY)](/IMGPI/Favorito.PNG)
+
+**MER**
 
  ![Modelo Entidade e Relacionamento (MER)](/IMGPI/MER.png)
  
