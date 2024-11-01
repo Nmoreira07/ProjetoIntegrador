@@ -2,20 +2,26 @@ package br.com.nojos.dao;
 
 import br.com.nojos.model.Produto;
 
+import javax.sql.DataSource;
 import java.sql.Connection;
-import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
+import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 
 public class NojosDao {
+    private final DataSource dataSource; // Adicione um DataSource
+
+    public NojosDao(DataSource dataSource) {
+        this.dataSource = dataSource;
+    }
 
     public void createProduto(Produto prod) {
         String SQL = "INSERT INTO PRODUTO (DESCRICAO, VALOR, MARCA) VALUES (?, ?, ?)";
 
-        try (Connection connection = DriverManager.getConnection("jdbc:h2:~/test", "sa", "sa");
+        try (Connection connection = dataSource.getConnection();
              PreparedStatement preparedStatement = connection.prepareStatement(SQL)) {
 
             preparedStatement.setString(1, prod.getDesc());
@@ -25,22 +31,22 @@ public class NojosDao {
 
             System.out.println("Produto inserido com sucesso!");
 
-        } catch (Exception e) {
-            System.out.println("Erro ao inserir produto: " + e.getMessage());
+        } catch (SQLException e) {
+            System.err.println("Erro ao inserir produto: " + e.getMessage());
         }
     }
 
     public List<Produto> findAllProdutos() {
         String SQL = "SELECT * FROM PRODUTO";
 
-        try (Connection connection = DriverManager.getConnection("jdbc:h2:~/test", "sa", "sa");
+        try (Connection connection = dataSource.getConnection();
              PreparedStatement preparedStatement = connection.prepareStatement(SQL);
              ResultSet resultSet = preparedStatement.executeQuery()) {
 
             List<Produto> produtos = new ArrayList<>();
 
             while (resultSet.next()) {
-                Long id = resultSet.getLong("ID"); // Certifique-se de que a coluna ID existe na tabela
+                Long id = resultSet.getLong("ID");
                 String prodDesc = resultSet.getString("DESCRICAO");
                 String prodMarca = resultSet.getString("MARCA");
                 Double prodValor = resultSet.getDouble("VALOR");
@@ -52,9 +58,29 @@ public class NojosDao {
             System.out.println("Produtos selecionados com sucesso!");
             return produtos;
 
-        } catch (Exception e) {
-            System.out.println("Erro ao selecionar produtos: " + e.getMessage());
+        } catch (SQLException e) {
+            System.err.println("Erro ao selecionar produtos: " + e.getMessage());
             return Collections.emptyList();
+        }
+    }
+
+    public void deleteProduto(Long id) {
+        String SQL = "DELETE FROM PRODUTO WHERE ID = ?";
+
+        try (Connection connection = dataSource.getConnection();
+             PreparedStatement preparedStatement = connection.prepareStatement(SQL)) {
+
+            preparedStatement.setLong(1, id);
+            int rowsAffected = preparedStatement.executeUpdate();
+
+            if (rowsAffected > 0) {
+                System.out.println("Produto deletado com sucesso!");
+            } else {
+                System.out.println("Nenhum produto encontrado com o ID especificado.");
+            }
+
+        } catch (SQLException e) {
+            System.err.println("Erro ao deletar produto: " + e.getMessage());
         }
     }
 }
