@@ -17,7 +17,7 @@ public class ListProdutoservlet extends HttpServlet {
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         List<Produto> produtos = new NojosDao().findAllProdutos();
 
-        req.setAttribute("produtos", produtos); // Remova o espaço extra
+        req.setAttribute("produtos", produtos);
 
         req.getRequestDispatcher("dashboard.jsp").forward(req, resp);
     }

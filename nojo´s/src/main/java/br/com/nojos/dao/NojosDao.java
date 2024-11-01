@@ -12,7 +12,7 @@ import java.util.Collections;
 import java.util.List;
 
 public class NojosDao {
-    private final DataSource dataSource; // Adicione um DataSource
+    private final DataSource dataSource;
 
     public NojosDao(DataSource dataSource) {
         this.dataSource = dataSource;
