@@ -7,14 +7,27 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <title>Dashboard</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"> <!-- Incluindo Font Awesome -->
     <style>
         body {
             background-color: #000000; /* Fundo preto */
             color: #f8f9fa; /* Texto claro */
-            font-family: Geneva, sans-serif; /* Fonte Geneva */
+            font-family: Arial, sans-serif; /* Fonte Arial */
         }
-        .container {
-            margin-top: 50px;
+        .navbar {
+            background-color: #212529; /* Cor da barra de navegação */
+        }
+        .navbar-brand {
+            color: #ff6f00; /* Cor do nome da loja */
+            font-weight: bold;
+            font-size: 1.5rem;
+        }
+        .nav-link {
+            color: #f8f9fa; /* Cor dos links */
+            margin-left: 20px; /* Espaçamento à esquerda */
+        }
+        .nav-link:hover {
+            color: #e65100; /* Cor do link ao passar o mouse */
         }
         .table-container {
             background-color: #212529; /* Fundo escuro para a tabela */
@@ -47,6 +60,45 @@
     </style>
 </head>
 <body>
+
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg">
+    <a class="navbar-brand" href="#">Nojo's</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+        <ul class="navbar-nav">
+            <li class="nav-item">
+                <a class="nav-link" href="#">Início</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">Login</a>
+            </li>
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    Marcas
+                </a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    <a class="dropdown-item" href="#">Adidas</a>
+                    <a class="dropdown-item" href="#">Anti Social Club</a>
+                    <a class="dropdown-item" href="#">Bape</a>
+                    <a class="dropdown-item" href="#">Jordan</a>
+                    <a class="dropdown-item" href="#">Nike</a>
+                    <a class="dropdown-item" href="#">Nike Nocta</a>
+                    <a class="dropdown-item" href="#">Off-White</a>
+                    <a class="dropdown-item" href="#">The North Face</a>
+                </div>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">
+                    <i class="fas fa-shopping-cart"></i> <!-- Ícone de carrinho de compras -->
+                </a>
+            </li>
+        </ul>
+    </div>
+</nav>
+
 <div class="container">
     <h1>Produtos</h1>
     <div class="table-container">
