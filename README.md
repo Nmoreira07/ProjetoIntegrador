@@ -3,6 +3,10 @@ P.I - Porofessor Enoque
 
 FUNCIONALIDADES :
 
+registrar produtos (Administrador) {
+	Cadastro de Produtos para a loja, função de incluir, deletar e listar.
+}
+
 
 cadastrar cliente (Cliente/Administrador) {
 	Cadastro para clientes e administradores. Inserir dados pessoais (email, identificação, telefone, endereço) e foto de perfil (opcional).
